@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Error Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text is visible.
+  </div>
+
+  <script>
+    // Using DOMContentLoaded event listener ensures the script runs after the element is parsed.
+    document.addEventListener('DOMContentLoaded', function() {
+       const myDiv = document.getElementById('myDiv');
+       if (myDiv) {
+         myDiv.style.display = "none";
+       } else {
+         console.error("Element with id 'myDiv' not found.");
+       }
+    });
+  </script>
+</body>
+</html>
